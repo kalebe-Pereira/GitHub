@@ -1,0 +1,59 @@
+            ATALHOS E FUNÇÕES GI
+-----------------------------------------------------------------------------------
+
+Para iniciar os comandos em Git, é necessário adicionar a palavra "git" antes dos comandos.
+
+add -> Serve para adicionar um arquivo para receber modificações do git.
+    Exemplo: git add arquivoExemplo.cpp
+
+    Pode-se Utilizar o ponto(.) para selecionar todos os arquivos da pasta para add.
+
+commit -> Serve para salvar as verções adicionadas.
+    Exemplo: git commit arquivoExemplo.cpp
+
+log -> Serve para ver todos os comit adicionadas.
+    Exemplo: git log
+
+    oneline -> Serve para ver toda a informação do commit em uma linha.
+        Exemplo: git log --oneline
+
+    all -> Serve para ver todos os commit.
+        Exemplo: git log --all
+
+switch -> Serve para voltar em algum commit. É necessário o link do log para isso.
+    Exemplo: git switch --datach <link>
+
+restore -> Serve para retirar algum add que você adicionou.
+    Exemplo: git restore --staged arquivoExemplo.cpp
+
+status -> Verifica os arquivos em add.
+    Exemplo: git status
+
+revert -> Serve para reverter algum commit feito (não apaga o commit). É necessário o link do log para isso.
+    Exemplo: git revert <link>
+
+
+                    BRANCH
+-----------------------------------------------------------------------------------------
+
+As Branchs são como uma liha do tempo como por exemplo, todos os commits até agora fazem parte da branch master (linha do tempo master, ou principal). Ela serve para fazer algumas alterações sem mexer no arquivo principal.
+
+Comandos relacionados a branch:
+
+branch -> Serve para criar uma nova branch.
+    Exemplo: git branch <nome_da_branch>
+
+    branch -> verifica todos os branch feitos.
+        Exemplo: git branch
+
+switch -> Acessa a branch. Basta colocar o nome da branch no caminho.
+    Exemplo: git switch <nome_da_branch>
+
+Graph -> Uitlizada no log, serve para ver os commit e suas ramificações.
+    exemplo: git log --graph 
+
+merge -> Serve para misturar duas branch, caso gostou da alteração e deseja adicionar no principal.
+    Exemplo: git merge <nome_da_branch>
+
+para deletar o branch, pode ser feito de modo abaixo:
+    ----- git branch -D <nome_da_branch> -----------

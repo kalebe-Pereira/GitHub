@@ -1,0 +1,54 @@
+Para vincular o GitHub com o git, será necessário a chave SSH. O SSH faz uma conecção segura e permanente com o pc.
+
+Para gerar a chve SSH, é necessário digitar o seguinte comando no terminal:
+
+    ssh-keygen -t ed25519 -C "email"
+
+Para pegar a chave SSK, precisa-se digitar o seguinte comando no terminal:
+
+    cat ~/.ssh/id_ed25519.pub
+
+Para vincular em seu Github, vá em:
+
+    Github -> configurações -> Chaves SSH e GPG -> nova chave SSH
+
+Para criar um repositório no GitHub, basta você clicar em novo e após selecionar repositório. Em geral será de sua escolha, a única coisa a se chamar a atenção é a licença, que deve ser a do MIT.
+
+Para clonar seu repositório do GitHub para o git, você pode apertar em "Code" e ir no campo SSH. Ps.: Pode ser feito pelo http, mas será necessário logar em sua conta toda vez que for utilizar.
+
+Por fim, pode criar uma pasta em seu explorador de arquivo e abrir com o terminal. Por fim utilizar o comando:
+
+    git clone <link do SSH do repositório>
+
+    PS.: Caso utilize o http, pode-se colar aqui também
+    
+--------------------------------------------------------------------------------
+                            COMANDOS PARA GITHUB
+--------------------------------------------------------------------------------
+                
+Push -> Envia os arquivos para o Github.
+    Exemplo: git push
+
+Pull -> O pull pega as mudanças do gitHub e traz para o git.
+    Exemplo git pull
+
+Fetch -> O Fetch serve para buscar as alterações do github para o git, mas sem alterar o que já estava produzido.
+    Exemplo: git fetch
+
+diff -> Compara as diferenças entre o github e o git.
+    Exemplo: git diff <nome_da_branch> origin/<nome_da_branch>
+                                        |-> Serve para ver a branch principal
+
+    Exemplo2: git diff master origin/master
+    PS.: Verifique o nome da branch com o comando "branch".
+
+
+------------------ IMPORTANTE -------------------
+
+Ao fazer um pull, não se faz um push no repositório original, se faz uma nova branch e depois envia as alterações.
+
+Para enviar as alterações se faz deste modo:
+
+    git push origin <nome_da_branch_secundaria>
+    
+    Exempo:git push origin secundaria
