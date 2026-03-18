@@ -52,3 +52,14 @@ Para enviar as alterações se faz deste modo:
     git push origin <nome_da_branch_secundaria>
     
     Exempo:git push origin secundaria
+
+------------ PULL REQUEST ------------------
+
+É o ato de criar alterações em uma nova branch para que o responsável pela branch principal aprove ou rejeite as alterações.
+
+Ela serve como um merge só que com repositórios online.
+
+----FAZER UM PULL REQUEST-----
+
+Primeiro se envia a branch com o push, logo após va no Github e aperte na aba de "Pull Request" nova solicitação de Pull Request.
+No campo "Comparar", utiliza sua alteração e logo após clique em 
