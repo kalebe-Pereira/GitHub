@@ -7,6 +7,8 @@ int main()
     std::cout << "Outra linha Adicionada" << "\n";
 
     std::cout << "Linha adicionada na branch secundaria." << '\n';
+
+    std::cout << "Outra linha alterada na Branch secundária" << '\n';
     
     return 0;
 }
