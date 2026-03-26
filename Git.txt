@@ -55,5 +55,8 @@ Graph -> Uitlizada no log, serve para ver os commit e suas ramificações.
 merge -> Serve para misturar duas branch, caso gostou da alteração e deseja adicionar no principal.
     Exemplo: git merge <nome_da_branch>
 
+    quit -> Serve para desfazer o merge.
+        Exemplo: git merge --quit
+
 para deletar o branch, pode ser feito de modo abaixo:
     ----- git branch -D <nome_da_branch> -----------
