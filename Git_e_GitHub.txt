@@ -30,7 +30,10 @@ Push -> Envia os arquivos para o Github.
     Exemplo: git push
 
 Pull -> O pull pega as mudanças do gitHub e traz para o git.
-    Exemplo git pull
+    Exemplo: git pull
+
+    rebase -> Serve para organizar os commit com o git e github, para não da erro de merge.
+        Exemplo: git pull --rebase origin <nome_da_branch>
 
 Fetch -> O Fetch serve para buscar as alterações do github para o git, mas sem alterar o que já estava produzido.
     Exemplo: git fetch
@@ -59,7 +62,12 @@ Para enviar as alterações se faz deste modo:
 
 Ela serve como um merge só que com repositórios online.
 
-----FAZER UM PULL REQUEST-----
+-------FAZER UM PULL REQUEST-----
 
 Primeiro se envia a branch com o push, logo após va no Github e aperte na aba de "Pull Request" nova solicitação de Pull Request.
-No campo "Comparar", utiliza sua alteração e logo após clique em 
+No campo "Comparar", utiliza sua alteração e logo após clique em cria Pull Request. Pode-se adicionar alguma descrição no processo e por fim, apertar novamente em criar Pull Request.
+
+----APROVAR UMA PULL REQUEST-----
+
+Para avaliar, basta acessar a área do repositório e apertar em Pull Requests, e irá aparaecer uma alteração, apertando nele da para saber quem o enviou. Apertando em files chances da para verificar a mudança no código.
+Para aprovação, bastar apertar o botão merge Pull Request.
