@@ -1,4 +1,16 @@
-            ATALHOS E FUNÇÕES GI
+            COPIANDO GITHUBS
+----------------------------------------------------------------------------------
+Para vincular o GitHub com o git, será necessário a chave SSH. O SSH faz uma conexão segura e permanente com o pc.
+
+Para gerar a chve SSH, é necessário digitar o seguinte comando no terminal:
+
+    ssh-keygen -t ed25519 -C "email"
+
+Para pegar a chave SSK, precisa-se digitar o seguinte comando no terminal:
+
+    cat ~/.ssh/id_ed25519.pub
+
+Para testar a conexão, utiliza-se o comando:
 -----------------------------------------------------------------------------------
 
 Para iniciar os comandos em Git, é necessário adicionar a palavra "git" antes dos comandos.
@@ -8,12 +20,19 @@ add -> Serve para adicionar um arquivo para receber modificações do git.
 
     Pode-se Utilizar o ponto(.) para selecionar todos os arquivos da pasta para add.
 
-commit -> Serve para salvar as verções adicionadas.
-    Exemplo: git commit arquivoExemplo.cpp
+    A -> Atualiza somente os que já estão no staged.
+        Exemplo: git add -a
+
+    *.<tipo_de_dado> -> Leva ao stage somete os arquivos do tipo informado.
+        Exemplo: git add *.py
+reverse - > Serve para retirar um add do arquivo que você adicionou.
+    Exemplo: git reverse <nome_do_arquivo>
+
+diff -> Serve para ver as modificações do arquivo no terminal.
+    Exemplo: git diff arquivoExemplo.cpp
 
 log -> Serve para ver todos os comit adicionadas.
     Exemplo: git log
-
     oneline -> Serve para ver toda a informação do commit em uma linha.
         Exemplo: git log --oneline
 
@@ -23,7 +42,7 @@ log -> Serve para ver todos os comit adicionadas.
 switch -> Serve para voltar em algum commit. É necessário o link do log para isso.
     Exemplo: git switch --datach <link>
 
-restore -> Serve para retirar algum add que você adicionou.
+restore -> Serve para rvoltar o arquivo do mesmo modo do último add.
     Exemplo: git restore --staged arquivoExemplo.cpp
 
 status -> Verifica os arquivos em add.
@@ -32,6 +51,14 @@ status -> Verifica os arquivos em add.
 revert -> Serve para reverter algum commit feito (não apaga o commit). É necessário o link do log para isso.
     Exemplo: git revert <link>
 
+commit -> Serve para salvar as verções adicionadas.
+    Exemplo: git commit arquivoExemplo.cpp
+
+    A -> Serve para adiciar os arquivos no stage e commitar-los ao mesmo tempo.
+        Exemplo: git commit -a -m "Mensagem para a o commit"
+
+    amend - "Atualiza o último commit sem a necessidade de adicionar outro. O amend só funciona no último commit.
+        Exemplo: git commit --amend -m "Atualizando o commit anterior"
 
                     BRANCH
 -----------------------------------------------------------------------------------------
@@ -43,6 +70,9 @@ Comandos relacionados a branch:
 branch -> Serve para criar uma nova branch.
     Exemplo: git branch <nome_da_branch>
 
+    M -> Serve para modificar o nome da branch. Você deve está dentro dela para modificar.
+        Exemplo: git branch -m <novo_nome_da_branch>
+        
     branch -> verifica todos os branch feitos.
         Exemplo: git branch
 
@@ -55,8 +85,18 @@ Graph -> Uitlizada no log, serve para ver os commit e suas ramificações.
 merge -> Serve para misturar duas branch, caso gostou da alteração e deseja adicionar no principal.
     Exemplo: git merge <nome_da_branch>
 
+    abort -> Para desfazer o merge e desfazer todas as alterações.
+        Exemplo: git merge --abort
+
     quit -> Serve para desfazer o merge.
         Exemplo: git merge --quit
+
+rebase -> serve para adicionar as últimas versões da main para uma branch. Utilizada quando a main é Atualizada antes da branch. Serve para fazer o contrário também, para Atualizar a main com as últimas versões da branch.
+    Exemplo: git rebase <nome_da_branch_secundaria>.
+    
+-----------DIFERENÇA ENTRE REBASE E MERGE ----------
+O merge preserva o histórico das branch e a ordem original dos commits, enquando o rebase cria um único histórico linear.
+-------------------------------------------------------------------------------------------------------------------
 
 para deletar o branch, pode ser feito de modo abaixo:
     ----- git branch -D <nome_da_branch> -----------

@@ -1,13 +1,3 @@
-Para vincular o GitHub com o git, será necessário a chave SSH. O SSH faz uma conecção segura e permanente com o pc.
-
-Para gerar a chve SSH, é necessário digitar o seguinte comando no terminal:
-
-    ssh-keygen -t ed25519 -C "email"
-
-Para pegar a chave SSK, precisa-se digitar o seguinte comando no terminal:
-
-    cat ~/.ssh/id_ed25519.pub
-
 Para vincular em seu Github, vá em:
 
     Github -> configurações -> Chaves SSH e GPG -> nova chave SSH
