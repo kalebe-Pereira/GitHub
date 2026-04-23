@@ -1,4 +1,17 @@
-            ATALHOS E FUNÇÕES GI
+            COPIANDO GITHUBS
+----------------------------------------------------------------------------------
+Para vincular o GitHub com o git, será necessário a chave SSH. O SSH faz uma conexão segura e permanente com o pc.
+
+Para gerar a chve SSH, é necessário digitar o seguinte comando no terminal:
+
+    ssh-keygen -t ed25519 -C "email"
+
+Para pegar a chave SSK, precisa-se digitar o seguinte comando no terminal:
+
+    cat ~/.ssh/id_ed25519.pub
+
+Para testar a conexão, utiliza-se o comando:
+    ssh -T git@github.com
 -----------------------------------------------------------------------------------
 
 Para iniciar os comandos em Git, é necessário adicionar a palavra "git" antes dos comandos.
@@ -8,12 +21,19 @@ add -> Serve para adicionar um arquivo para receber modificações do git.
 
     Pode-se Utilizar o ponto(.) para selecionar todos os arquivos da pasta para add.
 
-commit -> Serve para salvar as verções adicionadas.
-    Exemplo: git commit arquivoExemplo.cpp
+    A -> Atualiza somente os que já estão no staged.
+        Exemplo: git add -a
+
+    *.<tipo_de_dado> -> Leva ao stage somete os arquivos do tipo informado.
+        Exemplo: git add *.py
+reverse - > Serve para retirar um add do arquivo que você adicionou.
+    Exemplo: git reverse <nome_do_arquivo>
+
+diff -> Serve para ver as modificações do arquivo no terminal.
+    Exemplo: git diff arquivoExemplo.cpp
 
 log -> Serve para ver todos os comit adicionadas.
     Exemplo: git log
-
     oneline -> Serve para ver toda a informação do commit em uma linha.
         Exemplo: git log --oneline
 
@@ -23,7 +43,7 @@ log -> Serve para ver todos os comit adicionadas.
 switch -> Serve para voltar em algum commit. É necessário o link do log para isso.
     Exemplo: git switch --datach <link>
 
-restore -> Serve para retirar algum add que você adicionou.
+restore -> Serve para rvoltar o arquivo do mesmo modo do último add.
     Exemplo: git restore --staged arquivoExemplo.cpp
 
 status -> Verifica os arquivos em add.
@@ -32,6 +52,15 @@ status -> Verifica os arquivos em add.
 revert -> Serve para reverter algum commit feito (não apaga o commit). É necessário o link do log para isso.
     Exemplo: git revert <link>
 
+commit -> Serve para salvar as verções adicionadas.
+    Exemplo: git commit arquivoExemplo.cpp
+
+    A -> Serve para adiciar os arquivos no stage e commitar-los ao mesmo tempo.
+        Exemplo: git commit -a -m "Mensagem para a o commit"
+
+    ament - "Atualiza o último commit sem a necessidade de adicionar outro. O ament só funciona no último commit.
+        Exemplo: git commit --ament -m "Atualizando o commit anterior"
+        
 
                     BRANCH
 -----------------------------------------------------------------------------------------
