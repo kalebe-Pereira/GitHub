@@ -85,8 +85,18 @@ Graph -> Uitlizada no log, serve para ver os commit e suas ramificações.
 merge -> Serve para misturar duas branch, caso gostou da alteração e deseja adicionar no principal.
     Exemplo: git merge <nome_da_branch>
 
+    abort -> Para desfazer o merge e desfazer todas as alterações.
+        Exemplo: git merge --abort
+
     quit -> Serve para desfazer o merge.
         Exemplo: git merge --quit
+
+rebase -> serve para adicionar as últimas versões da main para uma branch. Utilizada quando a main é Atualizada antes da branch. Serve para fazer o contrário também, para Atualizar a main com as últimas versões da branch.
+    Exemplo: git rebase <nome_da_branch_secundaria>.
+    
+-----------DIFERENÇA ENTRE REBASE E MERGE ----------
+O merge preserva o histórico das branch e a ordem original dos commits, enquando o rebase cria um único histórico linear.
+-------------------------------------------------------------------------------------------------------------------
 
 para deletar o branch, pode ser feito de modo abaixo:
     ----- git branch -D <nome_da_branch> -----------
