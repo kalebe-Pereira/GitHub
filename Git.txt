@@ -11,13 +11,13 @@ Para pegar a chave SSK, precisa-se digitar o seguinte comando no terminal:
     cat ~/.ssh/id_ed25519.pub
 
 Para testar a conexão, utiliza-se o comando:
+    ssh -T git@github.com
 -----------------------------------------------------------------------------------
 
 Para iniciar os comandos em Git, é necessário adicionar a palavra "git" antes dos comandos.
 
-add -> Serve para adicionar um arquivo para receber modificações do git.
+add -> Serve para adicionar u arquivo para receber modificações do git.
     Exemplo: git add arquivoExemplo.cpp
-
     Pode-se Utilizar o ponto(.) para selecionar todos os arquivos da pasta para add.
 
     A -> Atualiza somente os que já estão no staged.
