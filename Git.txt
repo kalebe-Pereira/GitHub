@@ -12,7 +12,7 @@ Para cadastrar o nome de USUÁRIO, faz da seguinte forma:
 
             COPIANDO GITHUBS
 ----------------------------------------------------------------------------------
-Para vincular o GitHub com o git, será necessário a chave SSH. O SSH faz uma conexão segura e permanente com o pc.
+Para vincular o GitHub com git o git, será necessário a chave SSH. O SSH faz uma conexão segura e permanente com o pc.
 
 Para gerar a chve SSH, é necessário digitar o seguinte comando no terminal:
 
