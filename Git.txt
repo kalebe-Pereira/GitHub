@@ -1,3 +1,15 @@
+            VINCULANDO O GIT
+---------------------------------------------------------------------------------
+Para vincular o git, é necessidade cadastrar o E-mail e o nome de usuário, para cadastrar  o E-MAIL, faz da seguinte maneira:
+
+    git config --global user.email "SEU_E-MAIL"
+
+Para cadastrar o nome de USUÁRIO, faz da seguinte forma:
+
+     git config --global user.name "Your Name"
+
+----------------------------------------------------------------------------------
+
             COPIANDO GITHUBS
 ----------------------------------------------------------------------------------
 Para vincular o GitHub com o git, será necessário a chave SSH. O SSH faz uma conexão segura e permanente com o pc.
